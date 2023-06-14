@@ -203,9 +203,9 @@
 # print(dict)
 #----------------------------------------------
 #creat square list from tuple
-t=(34,5,67,88,90,33,12)
-square={}
-for i in t:
-    square.update({i:i*i})
-print(square)
+# t=(34,5,67,88,90,33,12)
+# square=[]
+# for i in t:
+#     square.append(i*i)
+# print(square)
 #------------------------------------------------------

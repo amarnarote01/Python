@@ -4,5 +4,5 @@ if "Apple" in fruits:
 else:
     print("Not Present")
 #change values
-fruits[1]="Chiku"
+fruits[1]="Chiku" #changable
 print(fruits)

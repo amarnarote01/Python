@@ -15,6 +15,5 @@ print(tuple1)
 x=tuple1.count(55)
 print(x)
 x=tuple1.index(55)
-print(x)
-print(len(tuple1))
-
+print("index",x)
+print("length=",len(tuple1))

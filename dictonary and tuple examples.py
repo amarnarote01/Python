@@ -78,11 +78,13 @@ names="".join(str(t))
 print(names) #ans (34, 4, 5, 67, 89, 90)
 """
 #
+"""
 msg="Itp is best training institute"
 # x=msg.split()
 # itp=[]
 # for i in x:
 #     itp.append(i)
 #or
-itp=[msg.split()]
+itp=msg.split()
 print(itp)
+"""

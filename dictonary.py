@@ -11,6 +11,7 @@ print(student)
 #8 popitem()-removes last key and value
 #9 update-add new key an value pair  
 #10 values -return all values 
+#11 join-
 #student.clear()
 #print(student)
 new_dict=student.copy()

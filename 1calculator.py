@@ -12,11 +12,11 @@ a=int(input("Enter first no. "))
 b=int(input("Enter second no. "))
 operator=input("Enter operator + - * / % ")
 if a==56 and b==9 and operator=='+':
-    print("56 + 9 = 77")
+    print("77")
 elif a==45 and b==3 and operator=='*':
-    print("45 * 3 = 555")
+    print("555")
 elif a==56 and b==6 and operator=='/':
-    print("56 / 6 = 4")
+    print("4")
 elif operator=='+':
     print(a+b)
 elif operator == '-':

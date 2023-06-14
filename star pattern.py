@@ -305,13 +305,13 @@
 #         a+=1
 #     print()
 # or
-n=int(input("enter rows"))
-for i in range(n,0,-1):
-    for k in range(i,n+1):
-        print(" ",end="")
-    for j in range(1,i+1):
-        print(j,end=" ")
-    print()
+# n=int(input("enter rows"))
+# for i in range(n,0,-1):
+#     for k in range(i,n+1):
+#         print(" ",end="")
+#     for j in range(1,i+1):
+#         print(j,end=" ")
+#     print()
 
 
 
