@@ -46,7 +46,7 @@ def add_product():
                 v=int(input("Enter price:-"))
             val.update({k:v})
             grossary.update({key:val})
-            print("--------------------")
+        print("--------------------")
     for key,val in grossary.items():
         print(f"Sr.no{key}:-")
         for k,v in val.items():
