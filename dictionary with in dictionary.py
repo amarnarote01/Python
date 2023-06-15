@@ -39,8 +39,7 @@ D={'emp1':{'name':'Bob','job':'Manager','sal':45000},
 #             print("----------------")
 # print("highest salary")
 # max=0
-# for key,val in D.items():
-#     for k,v in val.items():
+
 #         if k=='sal':
 #             if max < v:
 #                 max=v
@@ -51,12 +50,21 @@ D={'emp1':{'name':'Bob','job':'Manager','sal':45000},
 # ------------------------------------------------
 # add key value pair from user 
 
-key=input("enter key ")    
-val={}
-n=int(input("enter no of key value pair"))
-for i in range(1,n+1):
-    k=input("enter key")
-    v=input("enter val")
-    val.update({k:v})
-D.update({key:val})
+# key=input("enter key ")    
+# val={}
+# n=int(input("enter no of key value pair"))
+# for i in range(1,n+1):
+#     k=input("enter key")
+#     v=input("enter val")
+#     val.update({k:v})
+# D.update({key:val})
+# print(D)
+# -----------------------------------------------------
+# delete from dictionary
+y=D.copy()
+for key,val in y.items():
+    for k,v in val.items():
+        if v=='Admin':
+            D.pop(key)
 print(D)
+# -----------------------------------------------------
