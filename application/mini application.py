@@ -190,5 +190,5 @@ grossary={ 1:{'product_id':101,'product_name':'Maggie','stock':100 ,'price':25},
           9:{'product_id':109,'product_name':'Powdwer','stock':150 ,'price':70},
           10:{'product_id':110,'product_name':'Roomfreshner','stock':200 ,'price':80}
           }
-staff_or_customer()
+staff_or_customer()   
 
