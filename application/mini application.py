@@ -24,32 +24,6 @@ def staff():
         else:
             print("Thank You!!")
 
-# def menu():
-#     print("Menu")
-#     print("1. Add new Product")
-#     print("2. show all product")
-#     print("3. Update specific product")
-#     print("4. Delete product")
-#     print("5. purchase product")
-#     x=int(input("Select from above and Enter no -"))
-#     if x==1:
-#         add_product()
-#     elif x==2:
-#         show_all_product()
-#     elif x==3:
-#         update_product()
-#     elif x==4:
-#         delete_product()
-#     elif x==5:
-#         purchase_product()
-#     else:
-#         print("invalid choice")
-#         x =input("Want to try again type Y for Yes N for No-")
-#         if x=="y" or x=="Y":
-#           menu()
-#         else:
-#             print("Thank You!!")
-
 def add_product():
     x=int(input("Enter how many products Want to Add"))
     for i in range(0,x):
@@ -218,4 +192,3 @@ grossary={ 1:{'product_id':101,'product_name':'Maggie','stock':100 ,'price':25},
           }
 staff_or_customer()
 
-# menu()
