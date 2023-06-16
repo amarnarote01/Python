@@ -1,11 +1,12 @@
-
-def menu():
+def customer():
+    purchase_product()
+    
+def staff():
     print("Menu")
     print("1. Add new Product")
     print("2. show all product")
     print("3. Update specific product")
     print("4. Delete product")
-    print("5. purchase product")
     x=int(input("Select from above and Enter no -"))
     if x==1:
         add_product()
@@ -15,21 +16,44 @@ def menu():
         update_product()
     elif x==4:
         delete_product()
-    elif x==5:
-        purchase_product()
     else:
         print("invalid choice")
         x =input("Want to try again type Y for Yes N for No-")
         if x=="y" or x=="Y":
-          menu()
+          staff()
         else:
             print("Thank You!!")
 
+# def menu():
+#     print("Menu")
+#     print("1. Add new Product")
+#     print("2. show all product")
+#     print("3. Update specific product")
+#     print("4. Delete product")
+#     print("5. purchase product")
+#     x=int(input("Select from above and Enter no -"))
+#     if x==1:
+#         add_product()
+#     elif x==2:
+#         show_all_product()
+#     elif x==3:
+#         update_product()
+#     elif x==4:
+#         delete_product()
+#     elif x==5:
+#         purchase_product()
+#     else:
+#         print("invalid choice")
+#         x =input("Want to try again type Y for Yes N for No-")
+#         if x=="y" or x=="Y":
+#           menu()
+#         else:
+#             print("Thank You!!")
+
 def add_product():
-    print(f"There are {len(grossary)} products on stock")
     x=int(input("Enter how many products Want to Add"))
     for i in range(0,x):
-        key=input("enter Sr.no.:-")    
+        key=len(grossary)+1    
         val={}
         for i in range(4):
             if i==0:
@@ -50,7 +74,7 @@ def add_product():
     show_after_update()
     a=input("Want to enter menu again type Y for Yes N for No-")
     if a=="y" or a=="Y":
-        menu()
+        staff()
     else:
         print("Thank You!!")
 
@@ -62,7 +86,7 @@ def show_all_product():
         print("---------------------")
     a=input("Want to enter menu again type Y for Yes N for No-")
     if a=="y" or a=="Y":
-        menu()
+        staff()
     else:
         print("Thank You!!")
 
@@ -100,7 +124,7 @@ def update_product():
     show_after_update()
     a=input("Want to enter menu again type Y for Yes N for No-")
     if a=="y" or a=="Y":
-        menu()
+        staff()
     else:
         print("Thank You!!")
 
@@ -110,7 +134,7 @@ def delete_product():
     show_after_update()
     a=input("Want to enter menu again type Y for Yes N for No-")
     if a=="y" or a=="Y":
-        menu()
+        staff()
     else:
         print("Thank You!!")
 
@@ -134,7 +158,7 @@ def purchase_product():
 
     a=input("Want to enter menu again type Y for Yes N for No-")
     if a=="y" or a=="Y":
-        menu()
+        customer()
     else:
         print("Thank You!!")
 
@@ -166,6 +190,21 @@ def show_after_update():
             print(f"{k}-{v}")
         print("---------------------")
 
+def staff_or_customer():
+    print("1.Customer\n2.Staff")
+    x=int(input("Who are you if costomer Enter 1 if staff Enter No 2-"))
+    if x==1:
+        customer()
+    elif x==2:
+        staff()
+    else:
+        print("Invalid choice")
+        a=input("Want to enter menu again type Y for Yes N for No-")
+        if a=="y" or a=="Y":
+            staff_or_customer()
+        else:
+            print("Thank You!!")
+
 grossary={ 1:{'product_id':101,'product_name':'Maggie','stock':100 ,'price':25},
           2:{'product_id':102,'product_name':'Biscuits','stock':200 ,'price':10},
           3:{'product_id':103,'product_name':'Atta','stock':150 ,'price':100},
@@ -177,4 +216,6 @@ grossary={ 1:{'product_id':101,'product_name':'Maggie','stock':100 ,'price':25},
           9:{'product_id':109,'product_name':'Powdwer','stock':150 ,'price':70},
           10:{'product_id':110,'product_name':'Roomfreshner','stock':200 ,'price':80}
           }
-menu()
+staff_or_customer()
+
+# menu()
