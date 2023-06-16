@@ -52,6 +52,28 @@
 # syntax:-
 # list_name=[[expression for loop] for loop]
 #  expected output n_list=[[1,2,3],[1,2,3],[1,2,3]]
-nested_list=[[i for i in range(1,4)]for j in range(3)]
-print(nested_list)
-
+# nested_list=[[i for i in range(1,4)]for j in range(3)]
+# print(nested_list)
+# ------------------------------------
+# assignment
+# 1.write a list comprehension that builds a list contrining only the names with at least 8 characters
+list=["amar","shantanu","shrikant","sanket","hrishikesh","vishal"]
+names=[i for i in list if len(i)>=8]
+print(names)
+# --------------------------------------------
+# 2.add % in front and end of every single word in a given string for ex
+#  "Harry is good boy"--o/p-"%Harry% %is% %good% %boy%"
+msg="Harry is good boy"
+l=["%"+i+"%" for i in msg.split() ]
+x=" ".join(l)
+print(x)
+# ---------------------------------------------
+# 3. Remove all odd numbars from list using lc
+# ---------------------------------------------
+# 4.find the numbers from 1-100 that are divisible by 7 using lc
+# ---------------------------------------------
+# 5.count the number of spaces in string
+# -------------------------------------------
+# 6.find all the numbers from 1 to 100 that hav 3 in them
+# ---------------------------------------------
+# 7.

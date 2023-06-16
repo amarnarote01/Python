@@ -47,18 +47,12 @@ def add_product():
             val.update({k:v})
             grossary.update({key:val})
         print("--------------------")
-    for key,val in grossary.items():
-        print(f"Sr.no{key}:-")
-        for k,v in val.items():
-            print(f"{k}-{v}")
-        print("---------------------")
-    
+    show_after_update()
     a=input("Want to enter menu again type Y for Yes N for No-")
     if a=="y" or a=="Y":
         menu()
     else:
         print("Thank You!!")
-
 
 def show_all_product():
     for key,val in grossary.items():
@@ -72,8 +66,6 @@ def show_all_product():
     else:
         print("Thank You!!")
 
-
-
 def update_product():
     x=grossary.copy()
     print("Want to update product")
@@ -82,18 +74,30 @@ def update_product():
         if key==s:
             for k,v in val.items():
                 if k=='product_id':
-                    val[k]=int(input("Enter product_id want to change to:-"))
+                    a=input("Want to change product_id type Y for Yes N for No-")
+                    if a=="y" or a=="Y":
+                        val[k]=int(input("Enter product_id:-"))
+                    else:
+                        continue
                 if k=='product_name':
-                    val[k]=input("Enter product_name want to change to:-")
+                    a=input("Want to change product_name type Y for Yes N for No-")
+                    if a=="y" or a=="Y":
+                        val[k]=int(input("Enter product_name:-"))
+                    else:
+                        continue
                 if k=='stock':
-                    val[k]=int(input("Enter stock want to change to :-"))
+                    a=input("Want to change stock type Y for Yes N for No-")
+                    if a=="y" or a=="Y":
+                        val[k]=int(input("Enter stock:-"))
+                    else:
+                        continue
                 if k=='price':
-                    val[k]=int(input("Enter price want to change to :-"))
-    for key,val in grossary.items():
-        print(f"Sr.no{key}:-")
-        for k,v in val.items():
-            print(f"{k}-{v}")
-        print("---------------------")
+                    a=input("Want to change price type Y for Yes N for No-")
+                    if a=="y" or a=="Y":
+                        val[k]=int(input("Enter price:-"))
+                    else:
+                        continue
+    show_after_update()
     a=input("Want to enter menu again type Y for Yes N for No-")
     if a=="y" or a=="Y":
         menu()
@@ -103,13 +107,7 @@ def update_product():
 def delete_product():
     s=(int(input("Enter sr.no.of product want o delete")))
     grossary.pop(s)
-
-    for key,val in grossary.items():
-        print(f"Sr.no{key}:-")
-        for k,v in val.items():
-            print(f"{k}-{v}")
-        print("---------------------")
-
+    show_after_update()
     a=input("Want to enter menu again type Y for Yes N for No-")
     if a=="y" or a=="Y":
         menu()
@@ -132,6 +130,7 @@ def purchase_product():
                 if k=='price':
                     print(f"price ={v*y}")
     payment(v,y)
+    change_stock(x,y)
 
     a=input("Want to enter menu again type Y for Yes N for No-")
     if a=="y" or a=="Y":
@@ -150,6 +149,22 @@ def payment(v,y):
             payment(v,y)
         else:
             print("Thank You!!")
+
+def change_stock(s,y):
+    x=grossary.copy()
+    for key,val in x.items():
+        if key==s:
+            for k,v in val.items():
+                if k=='stock':
+                    val[k]=val[k]-y
+    show_after_update()
+
+def show_after_update():
+    for key,val in grossary.items():
+        print(f"Sr.no{key}:-")
+        for k,v in val.items():
+            print(f"{k}-{v}")
+        print("---------------------")
 
 grossary={ 1:{'product_id':101,'product_name':'Maggie','stock':100 ,'price':25},
           2:{'product_id':102,'product_name':'Biscuits','stock':200 ,'price':10},
