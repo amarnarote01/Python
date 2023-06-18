@@ -1,6 +1,70 @@
+def staff_or_customer():
+    print("1.Customer\n2.Staff")
+    x=int(input("Who are you if costomer Enter 1 if staff Enter No 2-"))
+    if x==1:
+        customer()
+    elif x==2:
+        staff()
+    else:
+        print("Invalid choice")
+        a=input("Want to enter menu again type Y for Yes N for No-")
+        if a=="y" or a=="Y":
+            staff_or_customer()
+        else:
+            print("Thank You!!")
+# option 1.for customer
 def customer():
     purchase_product()
-    
+
+def purchase_product():
+    print("List of products")
+    for key,val in grossary.items():
+        print(f"Sr.no:{key}:-")
+        for k,v in val.items():
+            print(f"{k}-{v}")
+        print("---------------------")
+    sum=0
+    cart(sum)
+# for adding product to cart
+def cart(sum):
+    x=int(input("Enter Sr.no. of Item want to add to cart"))
+    y=int(input("Enter quantity of product"))
+    z=grossary.copy()
+    for key,val in z.items():
+        if key==x:
+            for k,v in val.items():
+                if k=='price':
+                    s=v*y
+    change_stock(x,y)
+    sum+=(s)
+    print(f"price={sum}")
+    a=input("Want to add another product type Y for Yes N for No-")
+    if a=="y" or a=="Y":
+        cart(sum)
+    else:
+        payment(sum)
+# for payment of product
+def payment(sum):
+    pay=int(input(f"complete payment of {sum} to buy "))
+    if pay==sum:
+        print("Your order has been placed\nThank You!!")
+    else:
+        print("Invalid Amount!!")
+        a=input("Want to try payment again type Y for Yes N for No-")
+        if a=="y" or a=="Y":
+            payment(sum)
+        else:
+            print("Thank You!!")
+    show_after_update()
+# after purchace stock change
+def change_stock(s,y):
+    x=grossary.copy()
+    for key,val in x.items():
+        if key==s:
+            for k,v in val.items():
+                if k=='stock':
+                    val[k]=val[k]-y
+# option 2.for staff
 def staff():
     print("Menu")
     print("1. Add new Product")
@@ -24,7 +88,7 @@ def staff():
           staff()
         else:
             print("Thank You!!")
-
+# 1 st option of staff
 def add_product():
     x=int(input("Enter how many products Want to Add"))
     for i in range(0,x):
@@ -53,6 +117,7 @@ def add_product():
     else:
         print("Thank You!!")
 
+# 2 nd option of staff
 def show_all_product():
     for key,val in grossary.items():
         print(f"Sr.no{key}:-")
@@ -64,7 +129,7 @@ def show_all_product():
         staff()
     else:
         print("Thank You!!")
-
+# 3 rd option of staff
 def update_product():
     x=grossary.copy()
     print("Want to update product")
@@ -107,7 +172,7 @@ def update_product():
             staff()
         else:
             print("Thank You!!")
-
+# 4 th option of staff
 def delete_product():
     s=(int(input("Enter sr.no.of product want o delete")))
     grossary.pop(s)
@@ -118,77 +183,14 @@ def delete_product():
     else:
         print("Thank You!!")
 
-def purchase_product():
-    print("List of products")
-    for key,val in grossary.items():
-        print(f"Sr.no:{key}:-")
-        for k,v in val.items():
-            print(f"{k}-{v}")
-        print("---------------------")
-    sum=0
-    cart(sum)
-
-def cart(sum):
-    x=int(input("Enter Sr.no. of Item want to add to cart"))
-    y=int(input("Enter quantity of product"))
-    z=grossary.copy()
-    for key,val in z.items():
-        if key==x:
-            for k,v in val.items():
-                if k=='price':
-                    s=v*y
-    change_stock(x,y)
-    sum+=(s)
-    print(f"price={sum}")
-    a=input("Want to add another product type Y for Yes N for No-")
-    if a=="y" or a=="Y":
-        cart(sum)
-    else:
-        payment(sum)
-
-def payment(sum):
-    pay=int(input(f"complete payment of {sum} to buy "))
-    if pay==sum:
-        print("Your order has been placed\nThank You!!")
-    else:
-        print("Invalid Amount!!")
-        a=input("Want to try payment again type Y for Yes N for No-")
-        if a=="y" or a=="Y":
-            payment(sum)
-        else:
-            print("Thank You!!")
-    show_after_update()
-
-def change_stock(s,y):
-    x=grossary.copy()
-    for key,val in x.items():
-        if key==s:
-            for k,v in val.items():
-                if k=='stock':
-                    val[k]=val[k]-y
-
+# after performing any operation to show changes 
 def show_after_update():
     for key,val in grossary.items():
         print(f"Sr.no{key}:-")
         for k,v in val.items():
             print(f"{k}-{v}")
         print("---------------------")
-
-def staff_or_customer():
-    print("1.Customer\n2.Staff")
-    x=int(input("Who are you if costomer Enter 1 if staff Enter No 2-"))
-    if x==1:
-        customer()
-    elif x==2:
-        staff()
-    else:
-        print("Invalid choice")
-        a=input("Want to enter menu again type Y for Yes N for No-")
-        if a=="y" or a=="Y":
-            staff_or_customer()
-        else:
-            print("Thank You!!")
-
+# grossary 
 grossary={ 1:{'product_id':101,'product_name':'Maggie','stock':100 ,'price':25},
           2:{'product_id':102,'product_name':'Biscuits','stock':200 ,'price':10},
           3:{'product_id':103,'product_name':'Atta','stock':150 ,'price':100},
