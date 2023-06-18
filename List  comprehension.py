@@ -69,11 +69,34 @@
 # print(x)
 # ---------------------------------------------
 # 3. Remove all odd numbars from list using lc
+# numbers=[1,2,3,4,5,6,7,8,9,10]
+# x=numbers
+# [numbers.remove(i) for i in x if i%2!=0]
+# print(numbers)
 # ---------------------------------------------
 # 4.find the numbers from 1-100 that are divisible by 7 using lc
+# list=[i for i in range(1,100) if i%7==0]
+# print(list)
 # ---------------------------------------------
 # 5.count the number of spaces in string
+# msg="Welcome to ITP"
+# space=[i for i in msg if i==" "]
+# print(len(space))
 # -------------------------------------------
 # 6.find all the numbers from 1 to 100 that hav 3 in them
+# sum=10
+# list=[i for i in range(1,100) if "3" in str(i)]
+# print(list)
 # ---------------------------------------------
-# 7.
+# 7. create lower and upper dictionary for ex. l=["ReD","GreEen","BLue"]
+#   upper_lower_dict={'red':'RED','blue':'BLUE'....} using dc
+# l=["ReD","GreEen","BLue"]
+# upper_lower_dict={i.lower():i.upper() for i in l}
+# print(upper_lower_dict)
+# --------------------------------------------------
+# 8. lets assume - I have on dict - original_dict={'jack':38,'James':33,'martin':46,'joe':27}
+#     print only even values information in given dict.
+#     means output will be - {'jack':38,'martin':46}
+# original_dict={'jack':38,'James':33,'martin':46,'joe':27}
+# new={key:val for key,val in original_dict.items() if val%2==0 }
+# print(new)
