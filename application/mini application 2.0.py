@@ -13,6 +13,7 @@ def staff():
     elif x==2:
         show_all_product()
     elif x==3:
+        show_after_update()
         update_product()
     elif x==4:
         delete_product()
@@ -95,12 +96,17 @@ def update_product():
                         val[k]=int(input("Enter price:-"))
                     else:
                         continue
-    show_after_update()
-    a=input("Want to enter menu again type Y for Yes N for No-")
+    a=input("Want to update another product type Y for Yes N for No-")
     if a=="y" or a=="Y":
-        staff()
+        update_product()
     else:
         print("Thank You!!")
+        show_after_update()
+        a=input("Want to enter menu again type Y for Yes N for No-")
+        if a=="y" or a=="Y":
+            staff()
+        else:
+            print("Thank You!!")
 
 def delete_product():
     s=(int(input("Enter sr.no.of product want o delete")))
