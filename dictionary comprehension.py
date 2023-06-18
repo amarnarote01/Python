@@ -22,5 +22,15 @@
 # even_odd_dict={i:("even" if i%2==0 else "odd") for i in numbers}
 # print(even_odd_dict)
 # ---------------------------
-# 4.nested loops
-
+# 4. create lower and upper dictionary for ex. l=["ReD","GreEen","BLue"]
+#   upper_lower_dict={'red':'RED','blue':'BLUE'....} using dc
+# l=["ReD","GreEen","BLue"]
+# upper_lower_dict={i.lower():i.upper() for i in l}
+# print(upper_lower_dict)
+# --------------------------------------------------
+# 5. lets assume - I have on dict - original_dict={'jack':38,'James':33,'martin':46,'joe':27}
+#     print only even values information in given dict.
+#     means output will be - {'jack':38,'martin':46}
+# original_dict={'jack':38,'James':33,'martin':46,'joe':27}
+# new={key:val for key,val in original_dict.items() if val%2==0 }
+# print(new)
