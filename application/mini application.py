@@ -80,7 +80,7 @@ def update_product():
                 if k=='product_name':
                     a=input("Want to change product_name type Y for Yes N for No-")
                     if a=="y" or a=="Y":
-                        val[k]=int(input("Enter product_name:-"))
+                        val[k]=input("Enter product_name:-")
                     else:
                         continue
                 if k=='stock':
