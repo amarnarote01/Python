@@ -25,6 +25,12 @@ def purchase_product():
         print("---------------------")
     sum=0
     cart(sum)
+    show_after_update()
+    x =input("Want to Enter in menu type Y for Yes N for No-")
+    if x=="y" or x=="Y":
+        staff_or_customer()
+    else:
+        print("Thank You!!")
 # for adding product to cart
 def cart(sum):
     x=int(input("Enter Sr.no. of Item want to add to cart"))
@@ -37,7 +43,7 @@ def cart(sum):
                     s=v*y
     change_stock(x,y)
     sum+=(s)
-    print(f"price={sum}")
+    print(f"Total price={sum}")
     a=input("Want to add another product type Y for Yes N for No-")
     if a=="y" or a=="Y":
         cart(sum)
@@ -55,7 +61,7 @@ def payment(sum):
             payment(sum)
         else:
             print("Thank You!!")
-    show_after_update()
+    
 # after purchace stock change
 def change_stock(s,y):
     x=grossary.copy()
@@ -91,6 +97,7 @@ def staff():
 # 1 st option of staff
 def add_product():
     x=int(input("Enter how many products Want to Add"))
+    show_after_update()
     for i in range(0,x):
         key=len(grossary)+1    
         val={}
@@ -131,12 +138,11 @@ def show_all_product():
         print("Thank You!!")
 # 3 rd option of staff
 def update_product():
-    x=grossary.copy()
     print("Want to update product")
     s=(int(input("Enter sr.no.")))
-    for key,val in x.items():
+    for key,val in grossary.items():
         if key==s:
-            for k,v in val.items():
+            for k in val.keys():
                 if k=='product_id':
                     a=input("Want to change product_id type Y for Yes N for No-")
                     if a=="y" or a=="Y":
@@ -174,7 +180,8 @@ def update_product():
             print("Thank You!!")
 # 4 th option of staff
 def delete_product():
-    s=(int(input("Enter sr.no.of product want o delete")))
+    show_after_update()
+    s=(int(input("Enter sr.no.of product want to delete")))
     grossary.pop(s)
     show_after_update()
     a=input("Want to enter menu again type Y for Yes N for No-")

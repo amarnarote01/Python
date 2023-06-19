@@ -65,12 +65,11 @@ def show_all_product():
         print("Thank You!!")
 
 def update_product():
-    x=grossary.copy()
     print("Want to update product")
     s=(int(input("Enter sr.no.")))
-    for key,val in x.items():
+    for key,val in grossary.items():
         if key==s:
-            for k,v in val.items():
+            for k in val.keys():
                 if k=='product_id':
                     a=input("Want to change product_id type Y for Yes N for No-")
                     if a=="y" or a=="Y":
