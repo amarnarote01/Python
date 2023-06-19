@@ -7,11 +7,7 @@ def staff_or_customer():
         staff()
     else:
         print("Invalid choice")
-        a=input("Want to enter menu again type Y for Yes N for No-")
-        if a=="y" or a=="Y":
-            staff_or_customer()
-        else:
-            print("Thank You!!")
+        enter_menu_again()
 # option 1.for customer
 def customer():
     purchase_product()
@@ -26,8 +22,8 @@ def purchase_product():
     sum=0
     cart(sum)
     show_after_update()
-    x =input("Want to Enter in menu type Y for Yes N for No-")
-    if x=="y" or x=="Y":
+    a=input("Want to enter menu again type Y for Yes N for No-")
+    if a=="y" or a=="Y":
         staff_or_customer()
     else:
         print("Thank You!!")
@@ -89,11 +85,7 @@ def staff():
         delete_product()
     else:
         print("invalid choice")
-        x =input("Want to try again type Y for Yes N for No-")
-        if x=="y" or x=="Y":
-          staff()
-        else:
-            print("Thank You!!")
+        enter_menu_again()
 # 1 st option of staff
 def add_product():
     x=int(input("Enter how many products Want to Add"))
@@ -118,11 +110,7 @@ def add_product():
             grossary.update({key:val})
         print("--------------------")
     show_after_update()
-    a=input("Want to enter menu again type Y for Yes N for No-")
-    if a=="y" or a=="Y":
-        staff()
-    else:
-        print("Thank You!!")
+    enter_menu_again()
 
 # 2 nd option of staff
 def show_all_product():
@@ -131,11 +119,7 @@ def show_all_product():
         for k,v in val.items():
             print(f"{k}-{v}")
         print("---------------------")
-    a=input("Want to enter menu again type Y for Yes N for No-")
-    if a=="y" or a=="Y":
-        staff()
-    else:
-        print("Thank You!!")
+    enter_menu_again()
 # 3 rd option of staff
 def update_product():
     print("Want to update product")
@@ -173,22 +157,14 @@ def update_product():
     else:
         print("Thank You!!")
         show_after_update()
-        a=input("Want to enter menu again type Y for Yes N for No-")
-        if a=="y" or a=="Y":
-            staff()
-        else:
-            print("Thank You!!")
+        enter_menu_again()
 # 4 th option of staff
 def delete_product():
     show_after_update()
     s=(int(input("Enter sr.no.of product want to delete")))
     grossary.pop(s)
     show_after_update()
-    a=input("Want to enter menu again type Y for Yes N for No-")
-    if a=="y" or a=="Y":
-        staff()
-    else:
-        print("Thank You!!")
+    enter_menu_again()
 
 # after performing any operation to show changes 
 def show_after_update():
@@ -197,6 +173,13 @@ def show_after_update():
         for k,v in val.items():
             print(f"{k}-{v}")
         print("---------------------")
+# to entering menu for staff 
+def enter_menu_again():
+    a=input("Want to enter menu again type Y for Yes N for No-")
+    if a=="y" or a=="Y":
+        staff()
+    else:
+        print("Thank You!!")
 # grossary 
 grossary={ 1:{'product_id':101,'product_name':'Maggie','stock':100 ,'price':25},
           2:{'product_id':102,'product_name':'Biscuits','stock':200 ,'price':10},
