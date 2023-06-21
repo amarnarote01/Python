@@ -3,6 +3,7 @@
 # 2.**kwargs-keyword arguments like dictionary. whwn calling function that time
 #   keyword argument as a form of **kwargs
 # 3.default argument-
+# if want to use all arg, kwarg, normal parameter and default:-NADK-(normal p,args,default,kwargs)
 # ------------------------------------------------------------------------
 # 1.*args
 # def fun(*args):
@@ -99,6 +100,7 @@
 #     l2=list(s)
 #     print(l2)
 # dictinct(l)
+# -----------------------------------------------------------------
 # 3. Write a function that takes a number as a parameter and checks whether
 #    the number is prime or not
 # def prime_or_not(n):
@@ -112,6 +114,7 @@
 #         print("No is not prime")
 # n=int(input("Enter no"))
 # prime_or_not(n)
+# ----------------------------------------------------------------
 # 4. Write a Function to create a list where the values are the squares of
 #    numbers between 1 to 30(both included)
 # def fun():
@@ -120,3 +123,11 @@
 #         l.append(i*i)
 #     print(l)
 # fun()
+# ---------------------------------------------------------------
+# 5.if want to use all arg, kwarg, normal parameter and default:-NADK-(normal p,args,default,kwargs)
+# def fun(c,d,*args,e=56,**kwargs):
+#     print(c,d)
+#     print(args)
+#     print(e)
+#     print(kwargs)
+# fun(12,23,"abc","lmn","ijk",a=35,b=35)
