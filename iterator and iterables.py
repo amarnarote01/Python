@@ -68,7 +68,7 @@
 
 # 3.reduce cummulative additon or multiplication
 # print(list(reduce(fun,iterable)))
-# import functools
+# from functools import reduce
 # numbers=[1,2,3,4,5,6]
 # def sum(a,b):
 #     return a+b
@@ -80,4 +80,13 @@
 #     x=a*a,a*a*a
 #     return x
 # print(list(map(sq_cube,numbers)))
-
+# reverse of string
+# names =["abc","ghy","juy"]
+# def rev(x):
+#     return x[::-1]
+# print(list(map(rev,names)))
+# n=[3,4,5,6,7,8,9]
+# def div(x):
+#     if x%3==0 or x%5==0:
+#         return x 
+# print(list(filter(div,n)))

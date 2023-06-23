@@ -207,3 +207,22 @@
 #     square.append(i*i)
 # print(square)
 #------------------------------------------------------
+#upper to lower and lower to upper 
+#string can't change in python so use another  
+
+# msg="Welcome"
+# str=""
+# for i in msg:
+#     if i.isupper():
+#        str=str+i.lower()
+#     else:
+#         str=str+i.upper()
+# print(str)
+# --------------------------------------------
+# n1,n2=[int(x)for x in input("enter nos").split()]
+# if n1 < n2:
+#     for i in range (n1,n2+1):
+#         print(i,end=" ")
+# else:
+#     for i in range (n2,n1+1):
+#         print(i,end=" ")

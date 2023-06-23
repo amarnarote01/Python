@@ -126,3 +126,58 @@
 #     print(a/b)
 # elif operator == '%':
 #     print(a%b)
+# ------------------------------------------
+# n=int(input("Enter no"))
+# count=0
+# for i in range(2,n):
+#     if n%i==0:
+#         count=1
+# if count==0:
+#     print("Prime number")
+# else:
+#     print(" Not a Prime number")
+# ---------------------------------
+# list1=[23,45,67,23,56,78,23,89,23,23]
+# no=23
+# for i in range(0,len(list1)):
+#      if list1[i]==no:
+#         list1.pop(list1[i])
+# print(list1)
+# ------------------------------------
+# fruits = ["Apple", "Banana", "Cherry", "Mango"]
+# for i in fruits:
+#     print(i)
+# print("length =",len(fruits))# for length
+# for i in range(0,len(fruits)):
+#     print(i,end=" ") #to print in single line use end=" "
+# #addition 
+# l=[1,2,3,4,5,6,7,8,9,10]
+# print("\n list=",l)
+# sum=0
+# for i in l:
+#     sum=sum+i
+# print("\nsum =",sum)
+# ##addition odd and even
+# evensum=0
+# oddsum=0
+# for i in l:
+#     if i%2==0:
+#        evensum=evensum+i
+#     else:
+#         oddsum=oddsum+i
+# print("evensum=",evensum)
+# print("oddsum=",oddsum)
+# -----------------------------------------
+# x=int(input("enter no"))
+# sum=1
+# for i in range(x,0,-1):
+#     sum=sum*i
+# print("factorial=",sum) # or print(f"factorial={sum}")  
+# -----------------------------------------
+# l=[23,34,45,56,78,100,33,6,5]
+# max=l[0]
+# for i in range(1,len(l)):
+#     if max<l[i]:
+#         max=l[i]
+# print(f"Max number = {max}")
+
