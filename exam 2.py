@@ -75,8 +75,8 @@
 
 # 80
 # # ------------------------------------------------
-sampleDict = {"class": {"student": {"name": "Mike","marks": {"physics": 70,"history": 80}}}}
-print(sampleDict["class"]["student"]["marks"]["history"])
+# sampleDict = {"class": {"student": {"name": "Mike","marks": {"physics": 70,"history": 80}}}}
+# print(sampleDict["class"]["student"]["marks"]["history"])
 #____________________________________________________________________________
 # 5.Remove items from the set at once
 
@@ -111,14 +111,10 @@ print(sampleDict["class"]["student"]["marks"]["history"])
 # set2 = {30, 40, 50, 60, 70}
 # mylist=[]
 # for i in set1:
-#     if i in set2:
-#         continue
-#     else:
+#     if i  not in set2:
 #         mylist.append(i)
 # for i in set2:
-#     if i in set1:
-#         continue
-#     else:
+#     if i  not in set1:
 #         mylist.append(i)
 # print(set(mylist))
 
