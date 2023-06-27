@@ -226,3 +226,29 @@
 # else:
 #     for i in range (n2,n1+1):
 #         print(i,end=" ")
+# -------------------------------
+# only duplicate values
+# l1=[1,2,3,4,5,6,2,3,8,9,5,5]
+# l2=[]
+# for i in l1:
+#     if l1.count(i)>1:
+#         if i not in l2:
+#             l2.append(i)
+# print(l2)
+# -----------------------------------------
+# to remove all extra duplicate elements form list and create a new list of that element   
+# l1=[1,2,3,4,5,6,2,3,2,3,1,1,1,1,2,8,9,2,1,2,3]
+# l2=l1
+# l3=[]
+# l4=[]
+# for i in l2:
+#     if l2.count(i)>1:
+#         # print(i,l2.count(i))
+#         l3.append(i)
+#         if i not in l4:
+#             l4.append(i)
+#     else:
+#         l4.append(i)
+# print(l4)
+# print(l3)
+# # ------------------------------------------
