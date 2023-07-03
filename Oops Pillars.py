@@ -28,24 +28,51 @@
 # print(obj._emp__deptno) #name mangling-to access private variaables
 # ======================================================================================
 # getters and setters
-class emp:
-    def set_name(self,name):#setter
-        self.name=name
-    def set_age(self,age):
-        self.age=age
-    def set_sal(self,sal):
-        self.sal=sal
-    def get_name(self): #getter
-        return self.name
-    def get_age(self):
-        return self.age
-    def get_sal(self):
-        return self.sal
+# class emp:
+#     def set_name(self,name):#setter
+#         self.name=name
+#     def set_age(self,age):
+#         self.age=age
+#     def set_sal(self,sal):
+#         self.sal=sal
+#     def get_name(self): #getter
+#         return self.name
+#     def get_age(self):
+#         return self.age
+#     def get_sal(self):
+#         return self.sal
 
-obj=emp()
-obj.set_name("abc")
-obj.set_age(25)
-obj.set_sal(45000)
-print(obj.get_name())
-print(obj.get_age())
-print(obj.get_sal())
+# obj=emp()
+# obj.set_name("abc")
+# obj.set_age(25)
+# obj.set_sal(45000)
+# print(obj.get_name())
+# print(obj.get_age())
+# print(obj.get_sal())
+
+# ----------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------
+# 3.Inheritance
+# 3.1 single Inheritance
+# 3.2 multi Inheritance
+# 3.3 Hierarchical inheritance
+# 3.4 Multiple inheritance
+# 3.5 Hybrid inheritance
+# ------------------------------------------------------------------------------------------
+
+class Bank:
+    def __init__(self,name,acno,bal,atype):
+        self.cust_name=name
+        self.acno=acno
+        self.bal=bal
+        self.actype=atype
+class customer(Bank):
+    cust_add="pune"
+    def show_info(self):
+        print(self.cust_name,self.acno,self.bal,self.actype,customer.cust_add)
+
+c=customer("john",12231,50000,"savings")
+c.show_info()
+
+
+# -----------------------------------------------------------------------------------------
