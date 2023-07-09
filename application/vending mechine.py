@@ -6,6 +6,7 @@
 # Calculate the minimum number of coins to return
 # Display the change amount and coins to the user
 def purchase_product():
+    print("Welcome")
     Display()
     x=int(input("Enter Sr.no. of Item want to buy:"))
     if x in Products:
