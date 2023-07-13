@@ -40,7 +40,8 @@ def payment(v):
             elif v-pay<0:
                 print(f"your change {pay-v}\nCollect Your Product\nThank You!!")
                 break
-            v=v-pay
+            else:
+                v=v-pay
         else:
             print("Invalid Amount!!")
             a=input("Want to try payment again type Y for Yes N for No-")
