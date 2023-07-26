@@ -28,15 +28,15 @@
 # -----------------------------------------------
 # decorators:- enhance the functinality of other functions
 # syntax- @decorator_name
-# def decorator_function(any_function):
-#     def wrapper_function():
-#         print("This is awesome function")
-#         any_function()
-#     return wrapper_function
-# @decorator_function
-# def func1():
-#     print("I am in func1")
+def decorator_function(any_function):
+    def wrapper_function():
+        print("This is awesome function")
+        any_function()
+    return wrapper_function
+@decorator_function
+def func1():
+    print("I am in func1")
     
-# func1()
-# var =decorator_function(func1)
-# var()
+func1()
+var =decorator_function(func1)
+var()

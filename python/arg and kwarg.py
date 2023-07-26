@@ -1,5 +1,5 @@
 # *args and **kwrgs-
-# 1.args -(when calling function that time pass arguments as a form of *args)
+# 1.*args -(when calling function that time pass arguments as a form of *args)
 # 2.**kwargs-keyword arguments like dictionary. whwn calling function that time
 #   keyword argument as a form of **kwargs
 # 3.default argument-

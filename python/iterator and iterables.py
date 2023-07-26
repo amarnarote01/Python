@@ -44,11 +44,11 @@
 
 # 2.filter for condition or
 # print(list(filter(fun,iterable)))
-# l2=[56,67,89,90,23,45,50,66]
-# print(list(filter(lambda m:m>50,l2)))
+l2=[56,67,89,90,23,45,50,66]
+print(list(filter(lambda m:m>50,l2)))
 # length>4
 # names=["Amol","Amit","ram","Sham","Abhishekh"]
-# def vol_con(a):
+# def vol_con(a):0
 #     vcount=0
 #     ccount=0
 #     # l=[]
@@ -62,8 +62,6 @@
 #     x=vcount,ccount
 #     return(x)
 # print(list(map(vol_con,names)))
-
-
 
 
 # 3.reduce cummulative additon or multiplication

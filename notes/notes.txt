@@ -1,0 +1,910 @@
+What is Python?
+
+Python is an interpreted, object-oriented, high-level programming language with dynamic semantics developed by Guido van Rossum. It was originally released in 1991. Designed to be easy as well as fun, the name "Python" is a nod to the British comedy group Monty Python. Python has a reputation as a beginner-friendly language
+
+
+Python is used for server-side web development, software development, mathematics, and system scripting, and is popular for Rapid Application Development and as a scripting or glue language to tie existing components because of its high-level, built-in data structures, dynamic typing, and dynamic binding. 
+
+Features and Benefits of Python -
+
+
+1. Compatible with a variety of platforms including Windows, Mac, Linux, Raspberry     Pi, and others
+2. Uses a simple syntax comparable to the English language that lets developers use   fewer lines than other programming languages
+3. Operates on an interpreter system that allows code to be executed immediately,     fast-tracking prototyping.Can be handled in a procedural, object-orientated, or      functional way
+______________________________________________________________________________
+Basic Programs -
+
+pi = 3.141592653589793238462643383279
+
+print(f'The first 6 decimals of pi are {pi:.6f}.')
+print(f'My grade rounded to 3 decimals is {grade:.3%}.')
+
+Area of Triangle -Area = ½ × b × h
+Area of Rectangle -Area = w × h
+Area of Circle- Area = π × r2
+Area of Square -Area = a2
+
+
+print("%d %d" % (x,y))
+# print(100 * str(int(var1) + int(var4)) )
+# print(100 * "Hello world\n")
+# print("Enter your number")
+# inpnum = input()
+#
+# print("You entered", int(inpnum)+10)
+"""
+Type casting Functions -
+
+str()
+int()
+float()
+
+How to check user input is a number or string in Python? -
+
+a=34
+b=3.4
+str="hello"
+print(type(a))
+print(type(b))
+print(type(str))
+
+# How to get input from user -
+
+print("Enter first number")
+n1 = input()
+print("Enter second number")
+n2 = input()
+print("Sum of these two numbers is", int(n1) + int(n2))
+
+
+# Split Function
+
+x,y=[int(x) for i in input("enter no").split()]
+
+Escape Sequence -
+
+output - "Line A \n Line B
+print("Line A \\n Line B")
+print("hello \"world\" world")
+print('I\'m Scott')
+
+String Formatting :-
+
+age=int(input("enter your age"))
+name=input("Enter Your Name")
+city=input("Enter Your City")
+print(f"Age is {age} Name is {name} and City is {city}")
+
+String Slicing -
+
+mystr = "Harry is a good boy"
+# print(len(mystr))
+# print(mystr[::-2])
+b = "Hello, World!"
+print(b[-5:-2])
+
+mystr = "Harry is a good boy"
+print(len(mystr))
+print(mystr[0:5:2])
+print(mystr[::-1])
+print(mystr[-1:-4:-1])
+
+
+ord() function to convert a character to an integer (ASCII value). 
+chr() function to convert number to an character.
+
+____________________________________________________________________________
+There are four collection data types in the Python programming language:
+
+List- is a collection which is ordered and changeable(MUTABLE). Allows duplicate members.
+
+Tuple -is a collection which is ordered and unchangeable(IMMUTABLE). Allows duplicate members.
+
+Set- is a collection which is unordered and unindexed. No duplicate members.
+
+Dictionary- is a collection which is unordered, changeable and indexed. No duplicate members.It is key and value pair structure.
+
+
+fruits = ["Banana", "Orange", "Mango", "Grapes",
+           "Lollypop","Apple"]
+
+# print(fruits[5])
+
+mixed = [1,2,3,4,"five","six",2.3,None]
+
+
+print(mixed)
+
+print(mixed[5])
+
+print(mixed[-1])
+
+mixed[1:]="two"
+__________________________________________________________________
+Add Items in list -
+
+fruits-["apple","banana","cherry"]
+
+fruits.append("mango")
+
+__________________________________________________________________
+
+Insert an item as the specific position:-
+
+fruits = ["apple", "banana", "cherry"]
+
+fruits.insert(1, "orange")
+
+print(fruits)
+
+______________________________________________________________________________________________
+
+Remove Item -
+
+fruits.remove("banana")
+
+The pop() method removes the specified index, (or the last item if index is not specified):
+
+fruits.pop(2)
+
+del fruits[0]
+
+del fruits
+
+_______________________________________________________________________________________________
+
+Copy a List -
+
+mylist = fruits.copy()
+
+print(mylist)
+
+__________________________________________________________________
+  
+Join Two Lists -
+
+list1 = ["a", "b" , "c"]
+
+list2 = [1, 2, 3]
+
+list3 = list1 + list2
+
+print(list3)
+
+__________________________________________________________________
+
+In keyword with list -
+
+if 'apple' in fruits:
+  print('present')
+else:
+ print('not present')
+
+___________________________________________________________________________
+
+Negative Indexing -
+
+fruits = ["apple", "banana", "cherry"]
+
+print(fruits[-1])
+
+______________________________________________________________________________
+
+Range of Indexes -(list slicing)
+
+fruits = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+
+print(fruits[2:5])
+
+Range of Negative Indexes -
+
+fruits = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+
+print(fruits[-4:-1])
+
+______________________________________________________________________
+
+Change Item Value -
+
+fruits = ["apple", "banana", "cherry"]
+
+fruits[1] = "jackfruit"
+
+print(fruits)
+
+_____________________________________________________________________________
+
+Loop Through a List -
+
+fruits = ["apple", "banana", "cherry"]
+
+for x in fruits:
+  print(x)
+
+______________________________________________________________________________
+
+Check if Item Exists
+
+fruits = ["apple", "banana", "cherry"]
+
+if "apple" in fruits:
+
+  print("Yes, 'apple' is in the fruits list")
+
+______________________________________________________________________________
+
+Tuple - # In tuple no append,no insert,no pop , no remove functions
+
+          tuples are faster than list.
+
+methods - count,index,len,slicing(print tuple[:2])
+
+
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+____________________________________________________________________________
+ 
+Python has two built-in methods that you can use on tuples.
+
+Method	Description :-
+
+count-	Returns the number of times a specified value occurs in a tuple
+
+thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
+
+x = thistuple.count(5)
+
+print(x)
+_____________________________________________________________________________
+
+index()- Searches the tuple for a specified value and returns the position of where it was found.
+
+thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
+
+x = thistuple.index(8)
+
+print(x)
+
+**********************************************************
+Python has a set of built-in methods that you can use on dictionaries-
+
+key and value pair
+
+Method	Description :-
+
+1. clear()-	Removes all the elements from the dictionary
+
+student = {
+  "name": "Rahul",
+  "Age": 23,
+  "City": "Pune"
+}
+
+student.clear()
+print(student)
+__________________________________________________________________________________
+2. copy() -	Returns a copy of the dictionary
+  
+ student = {
+  "name": "Rahul",
+  "Age": 23,
+  "City": "Pune"
+}
+x = student.copy()
+print(x)
+_______________________________________________________________________________
+
+3. fromkeys()	Returns a dictionary with the specified keys and values
+ 
+ x = ('key1', 'key2', 'key3')
+ y = 100
+
+thisdict = dict.fromkeys(x, y)
+print(thisdict)
+___________________________________________________________________________
+
+4.get()	Returns the value of the specified key.
+ 
+ student = {
+  "name": "Rahul",
+  "Age": 23,
+  "City": "Pune"
+}
+
+x = student.get("age")
+
+print(x)
+_______________________________________________________________________________
+
+5.items() -Returns a list containing a tuple for each key value pair
+
+ student = {
+  "name": "Rahul",
+  "Age": 23,
+  "City": "Pune"
+}
+x = student.items()
+
+print(x)
+______________________________________________________________________________
+
+6. keys()-	Returns a list containing the dictionary's keys
+student = {
+  "name": "Rahul",
+  "Age": 23,
+  "City": "Pune"
+}
+x = student.keys()
+
+print(x)
+____________________________________________________________________________
+
+7. pop()-	Removes the element with the specified key
+
+ student = {
+  "name": "Rahul",
+  "Age": 23,
+  "City": "Pune"
+}
+student.pop("City")
+print(student)
+___________________________________________________________________________
+
+8. popitem() -	Removes the last inserted key-value pair
+
+ student = {
+  "name": "Rahul",
+  "Age": 23,
+  "City": "Pune"
+}
+student.popitem()
+print(student)
+____________________________________________________________________________
+
+9.update()-	Updates the dictionary with the specified key-value pairs.
+
+ student = {
+  "name": "Rahul",
+  "Age": 23,
+  "City": "Pune"
+}
+student.update({"Marks": 35})
+print(student)
+_______________________________________________________________________________
+
+10. values()-	Returns a list of all the values in the dictionary
+student = {
+  "name": "Rahul",
+  "Age": 23,
+  "City": "Pune"
+}
+x = student.values()
+print(x)
+**********************************************************
+
+Set -
+
+Python has a set of built-in methods that you can use on sets.
+
+Method	Description -
+
+1. add()-Adds an element to the set.
+
+fruits = {"apple", "banana", "cherry"}
+
+fruits.add("orange")
+
+print(fruits)
+_____________________________________________________________________________
+
+2. clear()-	Removes all the elements from the set.
+
+fruits = {"apple", "banana", "cherry"}
+
+fruits.clear()
+
+print(fruits)
+_____________________________________________________________________________
+ 
+3.copy()- Returns a copy of the set.
+
+fruits = {"apple", "banana", "cherry"}
+
+x = fruits.copy()
+
+print(x)
+
+_____________________________________________________________________________
+
+4. difference()- Returns a set containing the difference between two or more sets.
+
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+z = x.difference(y)
+
+print(z)
+____________________________________________________________________________
+5. union()-	Return a set containing the union of sets.
+
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+z = x.union(y)
+
+print(z)
+______________________________________________________________________________
+6.update()-	Update the set with the union of this set and others.
+
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+x.update(y)
+print(x)
+
+_____________________________________________________________________________
+7.remove()- Removes the specified element
+
+ fruits = {"apple", "banana", "cherry"}
+
+fruits.remove("banana")
+
+print(fruits)
+
+_______________________________________________________________________
+
+t =(1,2,3,4)
+n1,n2,n3,n4 =t
+print(n1,n2,n3,n4)
+
+d = {1: 2, 3: 11, 4: 3, 2: 12, 0: 0}
+s = sorted(d.items(),key=lambda d:d[0]) # sort on keys
+s1= sorted(d.items(),key=lambda d:d[1]) # sort on values
+
+_______________________________________________________________________________
+
+List Comprehension -
+
+with the help of list comprehension we can create of list in one line.
+
+# create a list of squares from 1 to 10 nos.
+
+Ex 1 . 
+squares = []
+for i in range (1,11):
+
+ squares.append(i**2)
+print(squares)
+
+square2 = [ i**2 for i in range(1,11)]
+print(square2)
+
+Ex. 2 
+To create -ve nos list
+new_negative = [-i for i in range(1,11)]
+print(new_negative)
+
+Ex. 3
+names = ["Martin","John","Scott"]
+new_list =['M','J','S']
+new_list =[name[0] for name in names]
+print(new_list)
+
+exercise 1 - define function that take list of strings. list containing reverse of every string using list comprehension
+
+ def(rev(l):
+  return [name[::-1] for name in l]
+print(rev(['abc','xyz','pqr']))
+
+# list comprehension with if statement -
+numbers = list(range(1,11))
+
+
+print(numbers)
+
+nums = []
+for i in numbers:
+ if i%2==0 :
+   nums.append(i)
+ print(nums)
+
+even_nums = [i for i in numbers if i%2==0]
+                    
+
+or
+even_num2 = [ i for i in range(1,11) if i%2==0]
+
+Exercise 2 - Num to string
+def num_to_string(l):
+ return [str(i) for i in l if (type(i)==int or type(i)==float)]
+print(num_to_string([true,false,[1,2,3],1,1.0,3]))
+
+List comprehension with if/else -
+
+nums =[1,2,3,4,5,6,7,8,9]
+# new_list =[-1,4,-3,8]
+new_list = [i*2 if(i%2 == 0) else -i for i in nums]
+print(new_list)
+
+Nested list comprehension -
+
+
+example - [[1,2,3],[1,2,3],[1,2,3]]
+
+
+nested_comp = [[i for i in range(1,4)] for j in range(3)]
+
+Dictionary Comprehension -
+
+Example 1 -
+# square = {1:1,2:4,3:9}
+square = {num:num**2 for num in range(1,11)}
+print(square)
+     or
+square = {f"square of {num} is":num**2 for num in range(1,11)}
+print on new line-
+for k,v in square.items():
+  print(f"{k} :{v}")
+
+
+Example 2- Count character of given string.
+string="Balguru"
+word_count ={char:string.count(char) for char in string}
+print(word_count)
+
+Dictionary comprehension with if/else
+# d ={1:'odd',2:'even'}
+odd_even ={i:('even' if i%2==0 else 'odd') for i in range(1,11)}
+print(odd_even)
+
+_________________________________________________________________________
+
+Lambda Function -
+
+Python Lambda Functions are anonymous function means that the function is without a name. As we already know that the def keyword is used to define a normal function in Python. Similarly, the lambda keyword is used to define an anonymous function in Python. 
+
+def add(a,b);
+ return a+b
+
+using lamda-  
+
+add2 = lamda a,b :a+b    # don't use lamda expression with variable you can use map,reduce,filter function(inbuild)
+print(add2(2,3))
+# print(add2)
+
+Ex-2 
+
+def is_even(a):
+ return a%2==0 
+print(is_even(5))
+
+iseven2 = lamda a : a%2==0
+print(is_even2(6))
+
+Ex-3
+
+def last_char(s):
+  returns s[-1]
+
+last_char = lambda s : s[-1]
+print(last_char('Martin'))
+
+
+lambda with if, else
+
+func = lambda s : True if len(s) > 5 else False
+
+________________________________________________________________________________
+
+Nested List and Dictionary -
+
+L = ['a', 'b', ['cc', 'dd', ['eee', 'fff']], 'g', 'h']
+
+print(L[2])
+
+print(L[2][2])
+
+print(L[2][2][0])
+
+print(L[-3])
+
+print(L[-3][-1])
+
+print(L[-3][-1][-2])
+___________________________________________________________________________
+
+L = ['a', ['bb', 'cc'], 'd']
+
+L[1].append('xx')
+
+L[1].insert(0,'xx')
+
+print(L)
+print(L)
+
+________________________________________________________________________
+
+L = ['a', ['bb', 'cc'], 'd']
+
+L[1].extend([1,2,3])
+
+print(L)
+
+# Prints ['a', ['bb', 'cc', 1, 2, 3], 'd']
+
+___________________________________________________________________________
+
+L = ['a', ['bb', 'cc', 'dd'], 'e']
+
+x = L[1].pop(1)
+
+print(L)
+print(x)
+
+# Prints cc
+
+print(len(L[1]))
+___________________________________________________________________________
+
+L = [[1, 2, 3],[4, 5, 6],[7, 8, 9]] 
+  
+for list in L:
+
+    for number in list:
+
+        print(number, end=' ')
+
+__________________________________________________________________________
+
+Create a Nested Dictionary -
+
+D = {'emp1': {'name': 'Bob', 'job': 'Mgr'},
+     'emp2': {'name': 'Kim', 'job': 'Dev'},
+     'emp3': {'name': 'Sam', 'job': 'Dev'}}
+
+___________________________________________________________________________
+
+IDs = ['emp1','emp2','emp3']
+
+EmpInfo = [{'name': 'Bob', 'job': 'Mgr'},
+           {'name': 'Kim', 'job': 'Dev'},
+           {'name': 'Sam', 'job': 'Dev'}]
+
+D = dict(zip(IDs, EmpInfo))
+
+print(D)
+
+__________________________________________________________________________
+IDs = ['emp1','emp2','emp3']
+Defaults = {'name': '', 'job': ''}
+
+D = dict.fromkeys(IDs, Defaults)
+
+print(D)
+
+_________________________________________________________________________
+
+D = {'emp1': {'name': 'Bob', 'job': 'Mgr'},
+     'emp2': {'name': 'Kim', 'job': 'Dev'},
+     'emp3': {'name': 'Sam', 'job': 'Dev'}}
+
+print(D['emp1']['name'])
+# Prints Bob
+
+print(D['emp2']['job'])
+# Prints Dev
+
+________________________________________________________________________
+Change Nested Dictionary Items-
+
+D = {'emp1': {'name': 'Bob', 'job': 'Mgr'},
+     'emp2': {'name': 'Kim', 'job': 'Dev'},
+     'emp3': {'name': 'Sam', 'job': 'Dev'}}
+
+D['emp3']['name'] = 'Max'
+D['emp3']['job'] = 'Janitor'
+
+print(D['emp3'])
+
+_________________________________________________________________________-
+
+Add or Update Nested Dictionary Items -
+
+
+D = {'emp1': {'name': 'Bob', 'job': 'Mgr'},
+     'emp2': {'name': 'Kim', 'job': 'Dev'},
+     'emp3': {'name': 'Sam', 'job': 'Dev'}}
+
+D['emp3'] = {'name': 'Max', 'job': 'Janitor'}
+
+print(D)
+
+__________________________________________________________________________
+Merge Dictionary -
+
+D1 = {'emp1': {'name': 'Bob', 'job': 'Mgr'},
+      'emp2': {'name': 'Kim', 'job': 'Dev'}}
+
+D2 = {'emp2': {'name': 'Sam', 'job': 'Dev'},
+      'emp3': {'name': 'Max', 'job': 'Janitor'}}
+
+
+D1.update(D2)
+__________________________________________________________________________
+Remove an Item by Key -
+
+
+D = {'emp1': {'name': 'Bob', 'job': 'Mgr'},
+     'emp2': {'name': 'Kim', 'job': 'Dev'},
+     'emp3': {'name': 'Sam', 'job': 'Dev'}}
+
+x = D.pop('emp3')
+
+
+_____________________________________________________________________________
+
+Iterate Through a Nested Dictionary -
+
+D = {'emp1': {'name': 'Bob', 'job': 'Mgr'},
+     'emp2': {'name': 'Kim', 'job': 'Dev'},
+     'emp3': {'name': 'Sam', 'job': 'Dev'}}
+
+for id, info in D.items():
+    print("\nEmployee ID:", id)
+    for key in info:
+        print(key + ':', info[key])
+
+
+
+___________________________________________________________________________
+
+Function in Python -
+
+Python Functions is a block of statements that return the specific task. The idea is to put some commonly or repeatedly done tasks together and make a function so that instead of writing the same code again and again for different inputs, we can do the function calls to reuse code contained in it over and over again.
+
+
+Some Benefits of Using Functions
+
+Increase Code Readability 
+Increase Code Reusability
+
+Types of Functions in Python -
+
+Built-in library function: These are Standard functions in Python that are available to use.
+User-defined function: We can create our own functions based on our requirements.
+
+___________________________________________________________________________
+
+Map , Filter and Reduce Function -
+
+Python's map(), filter(), and reduce() functions add a touch of functional programming to the language. All three of these are convenience functions that can be replaced with List Comprehensions or loops but offer a more elegant and concise solution to some problems.
+
+map(), filter(), and reduce() all work in the same way. These functions accept a function and a sequence of elements and return the result of applying the received function to each element in the sequence.
+
+
+Map function -
+
+numbers = [1,2,3,4] # to print squares
+
+def square(a):
+ return a**2
+
+squares= list(map(square,numbers))
+print(squares) or using lamda expression
+
+squares= list(map(lamda a: a**2,numbers))
+print(squares) or using same ex in list comprehension
+
+squares = [i**2 for i in numbers]
+print(squares) or without map and list comp
+
+new_list=[]
+
+for i in numbers:
+  new_list.append(square(i))
+print(new_list)
+
+
+Filter function - #map and filter function can only time iterate but in tuple u can iterarte again and gain
+def is_even(a) :
+ return a%2==0
+
+numbers =[3,4,5,6,7,8,9]
+evens = filter(is_even,numbers) or evens = tuple(filter(is_even,numbers))
+print(evens)
+for i in evens:
+    print(i)
+
+
+print(evens) or using lambda expression
+evens = tuple(filter(lambda a: a%2==0,numbers))
+print(evens)
+_______________________________________________________________________________
+
+Iterator vs iterables -
+
+Iterable is an object, that one can iterate over. It generates an Iterator when passed to iter() method. An iterator is an object, which is used to iterate over an iterable object using the __next__() method. Iterators have the __next__() method, which returns the next item of the object.
+
+numbers =[1,2,3,4] # tuples,string ----- iterables
+squares = map(lambda a a**2,numbers) #iterator
+
+iterable first call iter function -
+number_iter = iter(numbers)
+print(next(number_iter))
+
+iterator directly call next()
+squares = map(lambda a a**2,numbers) #iterator
+print(next(squares))
+
+
+_________________________________________________________________________________
+
+zip function - combine two list and return zip object as a form of tuple.
+
+user_id = ['user1','user2','user3']
+names = ['harshit','mohit','rohit']
+last_names=['shah','dixit','sharma']
+
+#('user1','harshit),('user2','mohit)
+print(zip(user_id,names,last_names)
+
+# or you can convert zip obect in dictionary or list
+
+print(dict(zip(user_id,names,last_names)))
+
+# example =[('a',1),('b',2)]
+print(dict(example))
+
+Exercise - compare list element and add max element in new list using zip
+
+for pair in zip(l1,l2):
+   new_list.append(max(pair))
+print(new_list)
+
+Excercise - find average in given lists using ZIP  -
+
+def avg_finder(l1,l2):
+ avg = []
+ for pair in zip(l1,l2):
+  avg.append(sum(pair)/len(pair))
+ return avg
+print(avg_finder([1,2,3],[4,5,6])
+      
+find average in given lists using *args -
+
+def avg_finder(*args):
+ avg = []
+ for pair in zip(*args):
+  avg.append(sum(pair)/len(pair))
+ return avg
+print(avg_finder([1,2,3],[4,5,6])
+         
+
+find average in given lists using Lambda -
+
+Using Lamda
+
+avg_finder = lambda *args:[sum(pair)/len(pair) for pair in zip(*args)]
+
+______________________________________________________________________________
+
+Enumerate Function -
+
+Enumerate() method adds a counter to an iterable and returns it in a form of enumerating object. This enumerated object can then be used directly for loops or converted into a list of tuples using the list() function.
+
+Parameters:
+
+Iterable: any object that supports iteration
+Start: the index value from which the counter is to be started, by default it is 0
+
+# create a list of fruits  
+fruits = ['apple', 'banana', 'cherry']  
+  
+for i, fruit in enumerate(fruits):  
+    # print the index and value of each element  
+    print(i, fruit)  
+______________________________________________________________________________
+
+
+

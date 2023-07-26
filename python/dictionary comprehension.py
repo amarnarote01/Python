@@ -15,7 +15,7 @@
 # for if
 # list_name=[expression cond for loop if]
 # for if else
-# list_name=[expression if else cond for loop]
+# list_name=[if else cond for loop expression]
 # 
 # even odd number 
 # numbers=[1,2,3,4,5,6,7,8,9,10]

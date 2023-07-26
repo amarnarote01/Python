@@ -64,6 +64,7 @@ names = " ".join(d)    #print only keys as default
 print(names)
 names = " ".join(d.values())    #only for string values
 print(names)"""
+
 #remove special symbols and char from string 
 #try yourself
 """

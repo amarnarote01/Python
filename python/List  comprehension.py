@@ -97,6 +97,6 @@
 # 8. lets assume - I have on dict - original_dict={'jack':38,'James':33,'martin':46,'joe':27}
 #     print only even values information in given dict.
 #     means output will be - {'jack':38,'martin':46}
-# original_dict={'jack':38,'James':33,'martin':46,'joe':27}
-# new={key:val for key,val in original_dict.items() if val%2==0 }
-# print(new)
+original_dict={'jack':38,'James':33,'martin':46,'joe':27}
+new={key:val for key,val in original_dict.items() if val%2==0 }
+print(new)

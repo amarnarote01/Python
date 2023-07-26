@@ -23,8 +23,8 @@
 # print(list)
 #  -----------------------------------------------------\
 # 4.
-# user_id=[1,2,3]
-# name=["amar","sanket","hrishi"]
-# surname=["narote","patil","supkar"]
-# print(list(zip(user_id,name,surname)))
-# print(dict(zip(user_id,zip(name,surname))))
+user_id=[1,2,3]
+name=["amar","sanket","hrishi"]
+surname=["narote","patil","supkar"]
+print(list(zip(user_id,name,surname)))
+print(dict(zip(user_id,zip(name,surname))))
